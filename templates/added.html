@@ -1,0 +1,24 @@
+<title>{% block title %}Event Results{% endblock %}</title>
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'activitiesdb.css') }}">
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+
+<center>
+<div class ="header">
+<h1 class="h1">Luther College Event Search</h1>
+</div>
+
+<div class="floater1 col-xs-12 col-md-12 col-lg-12">
+<h2>{{entity}} Status</h2>
+
+{{message}}
+</div>
+<br>
+
+<form method="POST" action="home">
+<input type="submit" class="formbuttons" value="Return Home">
+
+</center>
+{% endblock %}

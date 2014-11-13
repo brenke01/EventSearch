@@ -1,0 +1,37 @@
+.h1{
+font-size: 48px;
+color: white;
+font-family: arial}
+
+.body{
+	background-image: url('norse.jpg');
+}
+
+.header{
+background-color:blue;
+box-shadow: 10px 10px 5px;
+color: white;
+}
+a{
+	color: white;
+	font-weight: bolder;
+
+
+}
+
+table{
+	border-color: blue;
+}
+
+.maindiv{
+
+margin-right: 200px;
+margin-left: 200px;}
+
+.formbuttons{
+  padding:5px;
+  background-color: blue;
+  border: 1px solid #666;
+  color:#000;
+}
+

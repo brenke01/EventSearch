@@ -1,0 +1,48 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'activitiesdb.css') }}">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+</head>
+<body class = "body">
+<center>
+<div class ="header">
+
+
+
+	<h1 id = "h1">Luther College Events Center</h1><br>
+	
+</div>
+<h2 class="h2">Welcome to the Luther College Events Database!</h2>
+<p>Get Started: </p>
+
+<div class="floater5 col-xs-12 col-md-12 col-lg-12">
+
+</div>
+
+<div class="floater1 col-xs-12 col-md-12 col-lg-12">
+<form method="POST" action="searchevents">
+<input class="formbuttons" type="submit" value="SEARCH FOR AN EVENT" style="width: 400px; height: 100px">
+</form>
+</div>
+
+<div class="floater2 col-xs-12 col-md-12 col-lg-12">
+<form method="POST" action="searchforstudent">
+<input class="formbuttons" type="submit" value="SEARCH FOR A STUDENT" style="width: 400px; height: 100px">
+</form>
+</div>
+
+<div class="floater3 col-xs-12 col-md-12 col-lg-12">
+<form method="POST" action="addevent">
+<input class="formbuttons" type="submit" value="ADD AN EVENT" style="width: 400px; height: 100px">
+</form>
+</div>
+
+<div class="floater4 col-xs-12 col-md-12 col-lg-12">
+<form method="POST" action="addperson">
+<input class="formbuttons" type="submit" value="ADD A STUDENT" style="width: 400px; height: 100px">
+</form>
+</div>
+
+</body>
+</center>
+<html>

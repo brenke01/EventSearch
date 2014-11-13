@@ -1,0 +1,49 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'activitiesdb.css') }}">
+</head>
+<body class = "body">
+<center>
+<div class ="header">
+
+<h1 class="h1">Luther College Event Search</h1>
+
+
+</div>
+<table border="3"style="width:300px">
+<div class= "maindiv">
+
+<tr><p>Please fill out the following form to conduct your search:</p></tr>
+<td><form method= "POST" action="activitiesResults">
+<center>
+<p>Event Type:</p>
+<input type="checkbox" name="eventtype" value="Sports">Sports Events<br>
+<input type="checkbox" name="eventtype" value="Music">Music Events<br>
+<input type="checkbox" name="eventtype" value="School">School Sponsored Events<br>
+<p>Month:</p>
+<select name= "month">
+  <option value="January">January</option>
+  <option value="February">February</option>
+  <option value="March">March</option>
+  <option value="April">April</option>
+  <option value="May">May</option>
+  <option value="June">June</option>
+  <option value="July">July</option>
+  <option value="August">August</option>
+  <option value="September">September</option>
+  <option value="October">October</option>
+  <option value="November">November</option>
+  <option value="December">December</option>
+</select>
+<br>
+<br>
+<button type="submit" value="Find Activities">Find Activities </button>
+</center>
+</form>
+</td>
+
+</div>
+</table>
+</body>
+</center>
+<html>

@@ -1,0 +1,27 @@
+<title>{% block title %}Event Results{% endblock %}</title>
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'activitiesdb.css') }}">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<center>
+<div class ="header">
+<h1 class="h1">Luther College Event Search</h1>
+</div>
+<div class="floater1 col-xs-12 col-md-12 col-lg-12">
+<h2>Attendance Record</h2>
+<table border = "4">
+<tr>
+
+<ol>
+{% for i in eventattendees %}
+
+	<tr><td valign="top"><li>{{ i }} </li></td>
+
+
+
+
+	{% endfor %}
+	</ol>
+</tr>
+</div>
+</center>
+{% endblock %}

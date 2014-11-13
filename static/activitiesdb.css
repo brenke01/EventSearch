@@ -1,0 +1,55 @@
+#h1{
+font-size: 64px;
+color: #003399;
+font-family: “Century Gothic”, CenturyGothic, AppleGothic, sans-serif;
+font-weight: bold;
+
+
+}
+
+.h2{
+	font-weight: italic;
+}
+
+.header{
+background-color: white;
+box-shadow: 10px 10px 5px;
+color: #003399;
+height: 150px;
+
+
+}
+#headerimg{
+	float: left;
+}
+a{
+	color: white;
+	font-weight: bolder;
+
+
+}
+
+table{
+	border-color: #003399;
+	border-radius: 20px;
+	
+
+}
+
+.maindiv{
+
+margin-right: 200px;
+margin-left: 200px;}
+
+.formbuttons{
+  padding:10px;
+  background-color: #003399;
+  border: 10px solid #003399;
+  color: white;
+  border-radius: 10px;
+  font-size: 24px;
+}
+
+.floater5{
+	font-size: 24px;
+}

@@ -1,0 +1,44 @@
+<title>{% block title %}Event Results{% endblock %}</title>
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'activitiesdb.css') }}">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<center>
+<div class ="header">
+<h1 class="h1">Luther College Event Search</h1>
+</div>
+<br>
+<div class="floater1 col-xs-12 col-md-12 col-lg-12">
+<table border = "4">
+<tr>
+<form method = "POST" action="attendancerecord">
+<ol>
+{% for i in events %}
+
+	<tr><td valign="top"><li>{{ i }} </li></td>
+
+
+
+
+	{% endfor %}
+	</ol>
+
+</tr>
+</table>
+</div>
+<br>
+<div class="floater2 col-xs-12 col-md-12 col-lg-12">
+<p>Enter the ID of the event to view the attendance</p><br>
+<input type="text" name="eventid">
+<input type="submit" value="Attendance Record"><br>
+</form>
+<form method = "POST" action="evtjoined">
+<p>To join an event, please enter your Student ID and Event ID. </p>
+	<input type="text" name= "personid" value="Student ID">
+	<input type="text" name="eventid" value="Event ID">
+	<input type="submit" value="Join">
+</form>
+</div>
+</center>
+
+
+{% endblock %}

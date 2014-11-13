@@ -1,0 +1,39 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'activitiesdb.css') }}">
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+</head>
+<body class = "body">
+<center>
+<div class ="header">
+<h1 class="h1">Luther College Event Search</h1>
+</div>
+<table border="3"style="width:300px">
+<div class= "maindiv">
+<tr><p>Please fill out the following form to add a student:</p></tr>
+
+<div class="floater1 col-xs-12 col-md-12 col-lg-12">
+
+<form method = "POST" action="personadded">
+Student ID:
+<br>
+  <input type="text" name= "studentid" value="Student ID"><br>
+Student Name:
+<br>
+  <input type="text" name="name" value="Student Name"><br>
+Grad Year:
+<br>
+  <input type="text" name="gradyr" value="Grad Year"><br>
+  <input type="submit" value="Join">
+</form>
+</td>
+</div>
+</table>
+
+</div>
+
+</body>
+</center>
+<html>
