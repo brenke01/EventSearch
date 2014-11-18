@@ -12,6 +12,7 @@ app.debug = True
 #The following line is from https://github.com/kennethreitz/flask-heroku
 #It took care of all the database stuff
 heroku = Heroku(app)
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = SQLAlchemy(app)
 db.session.expire_on_commit = False
 
@@ -231,17 +232,24 @@ def reset():
 
 	p1 = Person(pid=196080, name="Jacob Albee",gradYr="2015")
 	p2 = Person(pid=389061, name="Kevin Bren",gradYr="2015")
-	e1 = Event(title="Men's Baseball",host="Sports", desc = "Men's Baseball Home vs Wartburg", month="May", date= "05/10/14")
-	e2 = Event(title="Women's Softball",host="Sports", desc = "Women's Softball Home vs Wartburg", month="April", date= "04/11/14")
-	e3 = Event(title="Jazz Concert",host="Music", desc = "Jazz Band Concert at the CFL", month="May", date= "05/12/14")
-	e4 = Event(title="Choir Concert",host="Music", desc = "Choir Band Concert at the CFL", month="May", date= "05/13/14")
-	e5 = Event(title="Graduation",host="School", desc = "Graduation", month="May", date= "05/14/14")
-	e6 = Event(title="Graduation Rehearsal",host="School", desc = "Graduation Rehearsal at Luther Football Field", month="May", date= "05/15/14")
-	e7 = Event(title="Conference Track & Field Meet",host="Sports", desc = "Conference Track & Field Meet at I have no idea", month="May", date= "05/09/14")
-	e8 = Event(title="Summer Classes",host="School", desc = "First day of summer classes", month="June", date= "06/05/14")
-	e9 = Event(title="Christmas @ Luther",host="School", desc = "Christmas at Luther band/choir concert", month="June", date= "06/05/14")
 
-	db.session.add_all([e1,e2,e3,e4,e5,e6,e7,e8,e9,p1, p2])
+	e1 = Event(title="Men's Baseball",host="Sports", desc = "Men's Baseball Home vs Wartburg", month="May", date= "05/10/15")
+	e2 = Event(title="Women's Softball",host="Sports", desc = "Women's Softball Home vs Wartburg", month="April", date= "04/11/15")
+	e3 = Event(title="Jazz Concert",host="Music", desc = "Jazz Band Concert at the CFL", month="May", date= "05/12/15")
+	e4 = Event(title="Choir Concert",host="Music", desc = "Choir Band Concert at the CFL", month="May", date= "05/13/15")
+	e5 = Event(title="Graduation",host="School", desc = "Graduation", month="May", date= "05/14/15")
+	e6 = Event(title="Graduation Rehearsal",host="School", desc = "Graduation Rehearsal at Luther Football Field", month="May", date= "05/15/15")
+	e7 = Event(title="Conference Track & Field Meet",host="Sports", desc = "Conference Track & Field Meet at I have no idea", month="May", date= "05/09/15")
+	e8 = Event(title="Summer Classes",host="School", desc = "First day of summer classes", month="June", date= "06/05/15")
+	e9 = Event(title="Christmas @ Luther",host="School", desc = "Christmas at Luther band/choir concert", month="December", date= "12/05/14")
+	e10 = Event(title="Football vs. Simpson",host="Sports", desc = "Luther Football at Simpson", month="November", date= "11/09/14")
+	e11 = Event(title="Resume and Cover Letter Workshop",host="School", desc = "Career Center", month="November", date= "11/15/14")
+	e12 = Event(title="Art Show",host="School", desc = "In the CFA studio", month="December", date= "12/09/14")
+	e13 = Event(title="Ochestra Concert",host="Music", desc = "In the CFL", month="November", date= "11/20/14")
+
+
+
+	db.session.add_all([e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13,p1,p2])
 	ar = AttendanceRecord(event_id=1,person_id=196080)
 	ar2 = AttendanceRecord(event_id=1,person_id=389061)
 	e1.attendees.append(ar)
