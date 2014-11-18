@@ -1,4 +1,4 @@
-#h1{
+.h1{
 font-size: 64px;
 color: #003399;
 font-family: “Century Gothic”, CenturyGothic, AppleGothic, sans-serif;
@@ -13,8 +13,7 @@ font-weight: bold;
 
 .header{
 background-color: white;
-box-shadow: 10px 10px 5px;
-color: #003399;
+
 height: 150px;
 
 
